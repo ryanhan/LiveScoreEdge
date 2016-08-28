@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="logo_size">50dp</dimen>
+    <dimen name="team_name_size">15sp</dimen>
+    <dimen name="team_score_gap">5dp</dimen>
+    <dimen name="score_layout_padding_top">30dp</dimen>
+    <dimen name="score_layout_padding_bottom">10dp</dimen>
+
+</resources>

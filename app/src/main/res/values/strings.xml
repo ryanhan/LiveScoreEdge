@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">NBA Live Score</string>
+    <string name="label">NBA Live Score</string>
+    <string name="description">Today\'s NBA Game Result</string>
+
+</resources>

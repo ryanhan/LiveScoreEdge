@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cocktail-provider xmlns:android="http://schemas.android.com/apk/res/android"
+    previewImage="@drawable/apps_edge_bg"
+    label="@string/label"
+    description="@string/description"
+    cocktailWidth="550"
+    updatePeriodMills="1800000"
+    permitVisibilityChanged="true">
+    <!--configure="cn.ryanman.app.configure.EdgeConfigure">-->
+</cocktail-provider>

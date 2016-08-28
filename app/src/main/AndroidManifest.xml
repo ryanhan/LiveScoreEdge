@@ -1,0 +1,49 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cn.ryanman.app.livescoreedge">
+
+    <uses-permission android:name="com.samsung.android.providers.context.permission.WRITE_USE_APP_FEATURE_SURVEY" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name=".activity.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver android:name=".widget.EdgeSinglePlusProvider">
+            <intent-filter>
+                <action android:name="com.samsung.android.cocktail.v2.action.COCKTAIL_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="com.samsung.android.cocktail.provider"
+                android:resource="@xml/edge_single_plus" />
+        </receiver>
+
+        <receiver android:name=".widget.UpdateReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.COCKTAIL_LIST_ADAPTER_UPDATE_COMPLETE" />
+                <action android:name="android.intent.action.COCKTAIL_LIST_ADAPTER_UPDATE_START" />
+                <action android:name="android.intent.action.COCKTAIL_LIST_ADAPTER_UPDATE_FAILED" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".widget.CocktailListAdapterService"
+            android:permission="android.permission.BIND_REMOTEVIEWS" />
+
+        <meta-data
+            android:name="com.samsung.android.cocktail.mode"
+            android:value="edge_single_plus" />
+
+    </application>
+
+</manifest>
